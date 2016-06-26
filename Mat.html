@@ -6,11 +6,11 @@ and open the template in the editor.
 -->
 <html>
     <head>
-         <title>4MTA</title>
+        <title>4MTA</title>
         <meta charset="UTF-8">
         <meta  name="viewport" content="Si estás Viendo esta te entereza saber">     
         <meta  name="viewport" content=" más de programación Siga practicando ">
-         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
         <link href="css/bootstrap-social.css" rel="stylesheet" type="text/css"/>
         <link href="css/styles.css" rel="stylesheet" type="text/css"/>
@@ -86,15 +86,15 @@ and open the template in the editor.
                         </div>
                         <div class="collapse navbar-collapse navbar-ex1-collapse">
                             <ul class="nav navbar-nav">
-                                <li class="MenuColor san1" ><a style="color:white; " href="#" >&nbsp;INICIO &nbsp;</a></li>
-                              <li class="MenuColor "> 
+                                <li class="MenuColor san1" ><a style="color:white; " href="index.html" >&nbsp;INICIO &nbsp;</a></li>
+                                <li class="MenuColor "> 
                                     <a style="color:white; " href="Nosot.html" >
                                         NOSOTROS</a></li>
                                 <li class="MenuColor"> <a style="color:white; " href="Mat.html" >Conexión y Codigo  </a></li>
                                 <li class="MenuColor"> <a style="color:white; " href="ConfTerminal.html" >Proyecto Final  </a></li>
                                 <li class="MenuColor"> <a style="color:white; " href="library.html" >Descargar Librerias  </a></li>
                                 <li class="MenuColor"> <a style="color:white; " href="EA.html" >Funcionalidad  </a></li>
-                            
+
                             </ul>
                             <ul class="nav navbar-nav navbar-right">
                                 <li class="MenuColor"><a href="#" data-toggle="modal" data-target="#myModal" style="color:white; ">
@@ -120,51 +120,84 @@ and open the template in the editor.
                 <div class="col-lg-3"></div>
             </div>
             <div class="tab-content">
+                
                 <div id="home" class="tab-pane fade in active">
                     <div class="row">
                         <div class="col-lg-1"></div>
                         <div class="col-lg-4">
-                            <h3>Conexión entre Arduino y LCD</h3>
-                            <table class="table table-bordered">
-                                <thead>
-                                    <tr>
-                                        <th>LCD</th>
-                                        <th>Arduino uno</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr><td>VSS</td><td>GND</td></tr>
-                                    <tr><td>VDD</td><td>5v</td></tr>
-                                    <tr><td>V0</td><td>Potenciómetro 50K</td></tr>
-                                    <tr><td>RS</td><td>7</td></tr>
-                                    <tr><td>RW</td><td>GND</td></tr>
-                                    <tr><td>E</td><td>8</td></tr>
-                                    <tr><td>D4</td><td>9</td></tr>
-                                    <tr><td>D5</td><td>10</td></tr>
-                                    <tr><td>D6</td><td>15</td></tr>
-                                    <tr><td>D7</td><td>14</td></tr>
-                                    <tr><td>A</td><td>5v</td></tr>
-                                    <tr><td>K</td><td>GND</td></tr>
+                            <div class="panel panel-primary">
+                                <div class="panel-body">
+                                    <h3>Conexión entre Arduino y LCD</h3>
+                                    <table class="table table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <th>LCD</th>
+                                                <th>Arduino uno</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr><td>VSS</td><td>GND</td></tr>
+                                            <tr><td>VDD</td><td>5v</td></tr>
+                                            <tr><td>V0</td><td>Potenciómetro 50K</td></tr>
+                                            <tr><td>RS</td><td>7</td></tr>
+                                            <tr><td>RW</td><td>GND</td></tr>
+                                            <tr><td>E</td><td>8</td></tr>
+                                            <tr><td>D4</td><td>9</td></tr>
+                                            <tr><td>D5</td><td>10</td></tr>
+                                            <tr><td>D6</td><td>15</td></tr>
+                                            <tr><td>D7</td><td>14</td></tr>
+                                            <tr><td>A</td><td>5v</td></tr>
+                                            <tr><td>K</td><td>GND</td></tr>
 
-                                </tbody>
-                            </table>
-                        </div>
-                        <div class="col-lg-6">
-                            <h1></h1>
-                            <h1></h1>
-                            <div class="panel-group">
-                                <div class="panel panel-primary">
-                                    <div class="panel-body"> 
-                                        <img id="myImg"  src="img/lcd arduino.png" alt="Trolltunga, Norway" class="img-responsive" />
-                                    </div>  </div>
+                                        </tbody>
+                                    </table>    
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-7 col-lg-offset-2">
-                         <div class="panel-group">
-                        <div class="panel panel-primary">
-                            <div class="panel-body"> 
-                                <p class=""><pre><div class="base"> <div class="rojo">
+                        <div class="col-lg-6">
+                            <br>
+                            <div class="panel-group" id="accordion">
+                                <div class="panel panel-primary">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+                                                Descripción</a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapse2" class="panel-collapse collapse in">
+                                        <div class="panel-body"> 
+                                            <label>
+                                                El LCD(Liquid Crystal Dysplay) o pantalla de cristal líquido es un dispositivo empleado para la visualización de contenidos o información de una forma gráfica, mediante caracteres, símbolos o pequeños dibujos dependiendo del modelo. Está gobernado por un microcontrolador el cual dirige todo su funcionamiento.
+                                                En este caso vamos a emplear un LCD de 16x2, esto quiere decir que dispone de 2 filas de 16 caracteres cada una. Los píxeles de cada símbolo o carácter, varían en función de cada modelo.
+                                            </label>
+                                        </div>     
+                                    </div>
+
+                                </div>
+                                <div class="panel panel-primary">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+                                                ver Conexión</a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapse1" class="panel-collapse collapse ">
+                                        <div class="panel-body"> 
+                                            <img id="myImg"  src="img/lcd arduino.png" alt="Trolltunga, Norway" class="img-responsive" />
+                                        </div>   
+                                    </div>
+
+                                </div>
+                                <div class="panel panel-primary">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+                                                Código Fuente  </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapse3" class="panel-collapse collapse">
+                                        <div class="panel-body"> 
+                                            <p class=""><pre><div class="base"> <div class="rojo">
         <a class="verde">#include</a> < LiquidCrystal.h>   <a class="comentario">//Libreria para LCD</a> 
 
        LiquidCrystal<a class="negro">lcd(7, 8, 9, 10, 15, 14);</a> <a class="comentario">//Pines para LCD</a> 
@@ -203,15 +236,18 @@ and open the template in the editor.
        <a class="negro">}</a> <a class="comentario">//fin de loop</a> 
    </div>
 </div>   </pre></p> 
-                            </div>  
+                                        </div>     
+                                    </div>
+
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    </div>
                 </div>
-                
                 <div id="menu1" class="tab-pane fade">
                     <div class="row">
                         <div class="col-lg-1"></div>
+
                         <div class="col-lg-5">
                             <h3>Conexión entre Arduino y RTC DS3231</h3>
                             <table class="table table-bordered">
@@ -236,21 +272,39 @@ and open the template in the editor.
 
                         <div class="col-lg-6">
                             <h1></h1>
-                            <h1></h1>
-                            <div class="panel-group">
+                            <div class="panel-group" id="accordion1">
                                 <div class="panel panel-primary">
-                                    <div class="panel-body"> 
-                                        <img id="myImg2" src="img/rtc sd3231 arduino.png" alt="Trolltunga, Norway" class="img-responsive" />
-                                    </div>  </div>
-                            </div>
-                        </div>
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordion1" href="#collapse10">
+                                                Descripción</a> </h4>  </div>
+                                    <div id="collapse10" class=" panel-collapse collapse in">
+                                        <div class="panel-body">
+                                            La fuente de alimentación de RTC es de 3-5, 5V, tiene 6 pines(GND, VCC, SDA, SCL, SQW, 32K), que lleva la cuenta de segundos minutos, horas mes y año automáticamente, tiene 56 bytes de memoria RAM, detección automáticamente de corte de corriente y cambia  a modo batería externa, I2C integrado en un solo chip.
 
-                    </div>
-                    <div class="col-lg-7 col-lg-offset-2">
-                      <div class="panel-group">
-                        <div class="panel panel-primary">
-                            <div class="panel-body"> 
-                <p class=""><pre>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-primary">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordion1" href="#collapse12">
+                                                Descripción</a> </h4>  </div>
+                                    <div id="collapse12" class=" panel-collapse collapse ">
+                                        <div class="panel-body">
+                                            <img id="myImg2" src="img/rtc sd3231 arduino.png" alt="Trolltunga, Norway" class="img-responsive" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-primary">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordion1" href="#collapse13">
+                                                Codigo Fuente</a> </h4>  </div>
+                                    <div id="collapse13" class=" panel-collapse collapse ">
+                                        
+                                            <div class="panel-body"> 
+                                                <p class=""><pre>
                 <div class="base"><div class="rojo">
    <a class="verde">#include</a> <a class="negro">< DS3231.h></a> <a class="comentario"> //unir el signo <  </a>
    DS3231<a class="negro"> rtc(4, 5);</a>  
@@ -280,48 +334,80 @@ and open the template in the editor.
             Serial<a class="negro">.</a>println<a class="negro">(t.</a>sec,<a class="voidC">DEC</a><a class="negro">);</a>
             delay<a class="negro">(1000);
             }</a></div></div </pre></p> 
- </div>  
+                                            </div>  
+                                    </div>
+                                </div>     
+                            </div> 
                         </div>
-                    </div>  
-                    </div>
-                    
+                          </div>
                 </div>
-<div id="menu2" class="tab-pane fade">
-     <div class="row">
-                        <div class="col-lg-1 "></div>
-                        <div class="col-lg-4">
-                            <h3>Conexión entre Arduino y DHT11</h3>
-                            <table class="table table-bordered">
-                                <thead>
-                                    <tr>
-                                        <th>DHT11 Sensor</th>
-                                        <th>Arduino uno</th>
+                <div id="menu2" class="tab-pane fade">
+                           <div class="row">
+                    <div class="col-lg-1 "></div>
+                    <div class="col-lg-4">
+                        <h3>Conexión entre Arduino y DHT11</h3>
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>DHT11 Sensor</th>
+                                    <th>Arduino uno</th>
 
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr><td>VSS</td><td>GND</td></tr>
-                                    <tr><td>VDD</td><td>5v</td></tr>
-                                    <tr><td>Dato</td><td>2</td></tr>
-                                </tbody>
-                            </table>
-</div>
-                        <div class="col-lg-6">
-                            <h1></h1>
-                            <h1></h1>
-                            <div class="panel-group">
-                                <div class="panel panel-primary">
-                                    <div class="panel-body"> 
-                                        <img id="myImg3" src="img/DHT11 arduino java.png" alt="Trolltunga, Norway" class="img-responsive" />
-                                    </div>  </div>
-                            </div>
-                        </div>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>VSS</td><td>GND</td></tr>
+                                <tr><td>VDD</td><td>5v</td></tr>
+                                <tr><td>Dato</td><td>2</td></tr>
+                            </tbody>
+                        </table>
                     </div>
-                    <div class="col-lg-10 col-lg-offset-1">
-                       <div class="panel-group">
-                        <div class="panel panel-primary">
-                            <div class="panel-body"> 
-             <p> <pre>
+                    <div class="col-lg-6">
+                        <h1></h1>
+                          <div class="panel-group" id="accordion2">
+                                <div class="panel panel-primary">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordion2" href="#collapse20">
+                                                Descripción</a>
+                                        </h4>
+                                    </div>
+                                    
+									<div id="collapse20" class="panel-collapse collapse in">
+                                        <div class="panel-body"> 
+                                            <label>
+                                            La fuente de alimentación de DHT11 es 3-5, 5V DC, tiene 3 pines (gnd,vcc,out), rango de medición Humedad: 20 ~ 90%, rango de medición de temperatura: 0 ~ 60'C (devuelve la medición en °c), módulo de humedad digital y sensor de temperatura.
+                                            </label>
+                                        </div>     
+                                    </div>
+                                </div>
+                                <div class="panel panel-primary">
+                                    
+									<div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordion2" href="#collapse21">
+                                                Conexión</a>
+                                        </h4>
+                                    </div>
+                                    
+									<div id="collapse21" class="panel-collapse collapse">
+                                        <div class="panel-body"> 
+                                          
+                                               <img id="myImg3" src="img/DHT11 arduino java.png" alt="Trolltunga, Norway" class="img-responsive" />
+                                
+                                        </div>     
+                                    </div>
+                                </div>
+                                <div class="panel panel-primary">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordion2" href="#collapse22">
+                                                Código </a>
+                                        </h4>
+                                    </div>
+                                   
+								   <div id="collapse22" class="panel-collapse collapse">
+                                        <div class="panel-body"> 
+                                           <p> <pre>
     <div class="base">
     <div class="colVer ">#include <a class="rojo"> < DHT.h> </a><a class="comentario">     //Libreria para DHT11 sensor</a></div>
     <div class="colVer">#define <a class="negro">DHTPIN 2      </a><a class="comentario">   //Seleccionamos el pin en el que se conecta el sensor</a></div>  
@@ -340,51 +426,59 @@ and open the template in the editor.
        <a class="rojo">Serial</a><a class="negro">.</a><a class="rojo">print</a><a class="negro">(dht_hum);</a>
        <a class="rojo">Serial</a><a class="negro">.</a><a class="rojo">print</a><a class="negro">(</a>", Temperatura="<a class="negro">);</a>
        <a class="rojo">Serial</a><a class="negro">.</a><a class="rojo">println</a><a class="negro">(dht_temp);</a>
-       } </div></div> </div></pre></p> </div>
-          </div>  </div>
-                    </div>               
+       } </div></div> 
+	   </div>
+	   </pre></p> 
+                                      
+	  </div>     
+                                    </div>
+                                </div>
+                                </div>
+                       
                     </div>
+                </div>
+                </div>
                 <div id="menu3" class="tab-pane fade">
-                        <div class="row">
-                        <div class="col-lg-1"></div>
-                        <div class="col-lg-6">
-                            <h3>Conexión entre Arduino y modulo SD y micro SD</h3>
-                            <table class="table table-bordered">
-                                <thead>
-                                    <tr>
-                                        <th>LCD</th>
-                                        <th>Arduino uno</th>
+                    <div class="row">
+                    <div class="col-lg-1"></div>
+                    <div class="col-lg-6">
+                        <h3>Conexión entre Arduino y modulo SD y micro SD</h3>
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>LCD</th>
+                                    <th>Arduino uno</th>
 
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr><td>CS</td><td>4</td></tr>
-                                    <tr><td>SCK</td><td>13</td></tr>
-                                    <tr><td>MOSI</td><td>11</td></tr>
-                                    <tr><td>MISO</td><td>12</td></tr>
-                                    <tr><td>VCC</td><td>5v</td></tr>
-                                    <tr><td>GND</td><td>GND</td></tr>
-                                </tbody>
-                            </table>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>CS</td><td>4</td></tr>
+                                <tr><td>SCK</td><td>13</td></tr>
+                                <tr><td>MOSI</td><td>11</td></tr>
+                                <tr><td>MISO</td><td>12</td></tr>
+                                <tr><td>VCC</td><td>5v</td></tr>
+                                <tr><td>GND</td><td>GND</td></tr>
+                            </tbody>
+                        </table>
 
+                    </div>
+                    <div class="col-lg-5">
+                        <h1></h1>
+                        <h1></h1>
+                        <div class="panel-group">
+                            <div class="panel panel-primary">
+                                <div class="panel-body"> 
+                                    <img id="myImg4" src="img/micro sd arduino.png" alt="Trolltunga, Norway" class="img-responsive" />
+                                </div>  </div>
                         </div>
-                        <div class="col-lg-5">
-                            <h1></h1>
-                            <h1></h1>
-                            <div class="panel-group">
-                                <div class="panel panel-primary">
-                                    <div class="panel-body"> 
-                                        <img id="myImg4" src="img/micro sd arduino.png" alt="Trolltunga, Norway" class="img-responsive" />
-                                    </div>  </div>
-                            </div>
-                        </div>
-                    </div> 
-                    <div class="panel-group">
-                        <div class="col-lg-10 col-lg-offset-1">
+                    </div>
+                </div> 
+                <div class="panel-group">
+                    <div class="col-lg-10 col-lg-offset-1">
                         <div class="panel panel-primary">
                             <div class="panel-body"> 
-                                
-                                  <p class=""><pre>
+
+                                <p class=""><pre>
 <div class="base"> <div class="rojo">
         <a class="colVer">#include</a> < SD.h> <a class="comentario">        //Libreria para el Lector de MicroSD</a>           
         <a class="colVer ">#include</a> <a class="rojo"> < DHT.h> </a><a class="comentario">         //Libreria para DHT11 sensor</a>
@@ -436,79 +530,81 @@ and open the template in the editor.
  <a class="negro">}</a>    <a class="comentario">//fin de loop</a> 
     </div>
 </div></pre></p>  </div>    
-                                </div>
-                                
                         </div>
+
                     </div>
                 </div>
             </div>
-        </div> </div>
-        <div id="myModal" class="modal">
-            <span class="close">×</span>
-            <img class="modal-content tamaño" id="img01">
         </div>
-        <div id="myModal2" class="modal2">
-            <span class="close1">×</span>
-            <img class="modal-content tamaño1" id="img02">
+                </div>
+            </div>
         </div>
-        <div id="myModal3" class="modal2">
-            <span class="close2">×</span>
-            <img class="modal-content tamaño3" id="img03">
-        </div>
-        <div id="myModal4" class="modal2">
-            <span class="close3">×</span>
-            <img class="modal-content tamaño3" id="img04">
-        </div>
-        <script>
-            var modal = document.getElementById('myModal');
-            var modal2 = document.getElementById('myModal2');
-            var modal3 = document.getElementById('myModal3');
-            var modal4 = document.getElementById('myModal4');
-            var img = document.getElementById('myImg');
-            var img2 = document.getElementById('myImg2');
-            var img3 = document.getElementById('myImg3');
-            var img4 = document.getElementById('myImg4');
-            var modalImg = document.getElementById("img01");
-            var modalImg2 = document.getElementById("img02");
-            var modalImg3 = document.getElementById("img03");
-            var modalImg4 = document.getElementById("img04");
-            img.onclick = function () {
-                modal.style.display = "block";
-                modalImg.src = this.src;
-                modalImg.alt = this.alt;
-            };
-            img2.onclick = function () {
-                modal2.style.display = "block";
-                modalImg2.src = this.src;
-                modalImg2.alt = this.alt;
-            };
-            img3.onclick = function () {
-                modal3.style.display = "block";
-                modalImg3.src = this.src;
-                modalImg3.alt = this.alt;
-            };
-            img4.onclick = function () {
-                modal4.style.display = "block";
-                modalImg4.src = this.src;
-                modalImg4.alt = this.alt;
-            };
-            var span = document.getElementsByClassName("close")[0];
-            var span1 = document.getElementsByClassName("close1")[0];
-            var span2 = document.getElementsByClassName("close2")[0];
-            var span3 = document.getElementsByClassName("close3")[0];
-            span.onclick = function () {
-                modal.style.display = "none";
-            };
-            span1.onclick = function () {
-                modal2.style.display = "none";
-            };
-            span2.onclick = function () {
-                modal3.style.display = "none";
-            };
-            span3.onclick = function () {
-                modal4.style.display = "none";
-            };
-        </script>
+<div id="myModal" class="modal">
+    <span class="close">×</span>
+    <img class="modal-content tamaño" id="img01">
+</div>
+<div id="myModal2" class="modal2">
+    <span class="close1">×</span>
+    <img class="modal-content tamaño1" id="img02">
+</div>
+<div id="myModal3" class="modal2">
+    <span class="close2">×</span>
+    <img class="modal-content tamaño3" id="img03">
+</div>
+<div id="myModal4" class="modal2">
+    <span class="close3">×</span>
+    <img class="modal-content tamaño3" id="img04">
+</div>
+<script>
+    var modal = document.getElementById('myModal');
+    var modal2 = document.getElementById('myModal2');
+    var modal3 = document.getElementById('myModal3');
+    var modal4 = document.getElementById('myModal4');
+    var img = document.getElementById('myImg');
+    var img2 = document.getElementById('myImg2');
+    var img3 = document.getElementById('myImg3');
+    var img4 = document.getElementById('myImg4');
+    var modalImg = document.getElementById("img01");
+    var modalImg2 = document.getElementById("img02");
+    var modalImg3 = document.getElementById("img03");
+    var modalImg4 = document.getElementById("img04");
+    img.onclick = function () {
+        modal.style.display = "block";
+        modalImg.src = this.src;
+        modalImg.alt = this.alt;
+    };
+    img2.onclick = function () {
+        modal2.style.display = "block";
+        modalImg2.src = this.src;
+        modalImg2.alt = this.alt;
+    };
+    img3.onclick = function () {
+        modal3.style.display = "block";
+        modalImg3.src = this.src;
+        modalImg3.alt = this.alt;
+    };
+    img4.onclick = function () {
+        modal4.style.display = "block";
+        modalImg4.src = this.src;
+        modalImg4.alt = this.alt;
+    };
+    var span = document.getElementsByClassName("close")[0];
+    var span1 = document.getElementsByClassName("close1")[0];
+    var span2 = document.getElementsByClassName("close2")[0];
+    var span3 = document.getElementsByClassName("close3")[0];
+    span.onclick = function () {
+        modal.style.display = "none";
+    };
+    span1.onclick = function () {
+        modal2.style.display = "none";
+    };
+    span2.onclick = function () {
+        modal3.style.display = "none";
+    };
+    span3.onclick = function () {
+        modal4.style.display = "none";
+    };
+</script>
 
-    </body>
+</body>
 </html>
