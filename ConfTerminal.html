@@ -287,10 +287,13 @@ and open the template in the editor.
         }
        t=rtc.<a class="rojo">getTime</a>();
        
-       <a class="verde">if</a>(<a class="rojo">Serail</a>.<a class="rojo">available</a>()){
+       <a class="verde">if</a>(<a class="rojo">Serial</a>.<a class="rojo">available</a>()){
         caracter = <a class="celeste">char</a>(<a class="rojo">Serail</a>.<a class="rojo">read</a>());
         cadena.<a class="rojo">concat</a>(caracter);
-        <a class="comentario">//:::::::::::::Date Inicio String::::::::::::::::</a>
+        
+
+     <a class="verde">while</a>(cadena.<a class="rojo">length</a>()==28){
+     <a class="comentario">//:::::::::::::Date Inicio String::::::::::::::::</a>
         dia=cadena.<a class="rojo">substring</a>(0,2); mes=cadena.<a class="rojo">substring</a>(2,4);
         anio=cadena.<a class="rojo">substring</a>(4,8);
         hora=cadena.<a class="rojo">substring</a>(8,10); minuto=cadena.<a class="rojo">substring</a>(10,12);
@@ -313,8 +316,6 @@ and open the template in the editor.
        <a class="comentario">//:::::::::::::Imprimir en el LCD::::::::::::::::::::</a>
         lcdDateInicion=dia+<a class="celeste">'/'</a>+mes+<a class="celeste">'/'</a>+<a class="celeste">'.'</a>+<a class="celeste">'.'</a>+hora+<a class="celeste">':'</a>+minuto+<a class="celeste">':'</a>+segundo;     <a class="comentario">//Imprimir  en LCD</a>
         lcdDateFinal=diaF+<a class="celeste">'/'</a>+mesF+<a class="celeste">'/'</a>+<a class="celeste">'.'</a>+<a class="celeste">'.'</a>+horaF+<a class="celeste">':'</a>+minutoF+<a class="celeste">':'</a>+segundoF;  <a class="comentario">//Imprimir  en LCD</a>
-
-     <a class="verde">while</a>(cadena.<a class="rojo">length</a>()==28){
         t=rtc.<a class="rojo">getTime</a>();
         lcd.<a class="rojo">setCursor</a>(0, 0);
         lcd.<a class="rojo">print</a>(<a class="celeste">"TIEMPO DE INICIO"</a>);

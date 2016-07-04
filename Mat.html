@@ -199,7 +199,7 @@ and open the template in the editor.
                                     <div id="collapse3" class="panel-collapse collapse">
                                         <div class="panel-body"> 
                                             <p class=""><pre><div class="base"> <div class="rojo">
-        <a class="verde">#include</a> < LiquidCrystal.h>   <a class="comentario">//Libreria para LCD</a> 
+        <a class="verde">#include</a> <a class="negro"><</a>LiquidCrystal.h>   <a class="comentario">//Libreria para LCD</a> 
 
        LiquidCrystal<a class="negro">  lcd(7, 8, 9, 10, 15, 14);</a> <a class="comentario">//Pines para LCD</a> 
        <a class="voidC">String</a><a class="negro"> nombre=</a><a class="voidC">"INICIALIZANDO..."</a><a class="negro">;</a>
@@ -307,7 +307,7 @@ and open the template in the editor.
                                             <div class="panel-body"> 
                                                 <p class=""><pre>
                 <div class="base"><div class="rojo">
-   <a class="verde">#include</a> <a class="negro">< DS3231.h></a> <a class="comentario"> //unir el signo <  </a>
+   <a class="verde">#include</a> <a class="negro"><</a><a class="negro">DS3231.h></a> <a class="comentario"> //unir el signo <  </a>
    DS3231<a class="negro"> rtc(6, 5);</a>  
    Time<a class="negro"> t;</a> <a class="comentario">  //variable para el tiempo</a>
    <a class="voidC">void</a><a class="verde"> setup</a><a class="negro">(){</a>
@@ -410,7 +410,7 @@ and open the template in the editor.
                                         <div class="panel-body"> 
                                            <p> <pre>
     <div class="base">
-    <div class="colVer ">#include <a class="rojo"> < DHT.h> </a><a class="comentario">     //Libreria para DHT11 sensor</a></div>
+    <div class="colVer ">#include <a class="rojo"> <a class="negro"><</a>DHT.h> </a><a class="comentario">     //Libreria para DHT11 sensor</a></div>
     <div class="colVer">#define <a class="negro">DHTPIN 2      </a><a class="comentario">   //Seleccionamos el pin en el que se conecta el sensor</a></div>  
     <div class="colVer">#define <a class="negro">DHTTYPE DHT11 </a> <a class="comentario">   //Se selecciona el DHT11 (hay //otros DHT)</a></div>  
     <div class="negroE"><a class="negro">DHT dht(DHTPIN, DHTTYPE);</a><a class="comentario">//Se inicia una variable que será usada por Arduino para comunicarse con el sensor</a></div>
@@ -481,7 +481,7 @@ and open the template in the editor.
 
                                 <p class=""><pre>
 <div class="base"> <div class="rojo">
-        <a class="colVer">#include</a> < SD.h> <a class="comentario">        //Libreria para el Lector de MicroSD</a>           
+        <a class="colVer">#include</a><a class="negro"><</a>SD.h> <a class="comentario">        //Libreria para el Lector de MicroSD</a>           
         <a class="colVer ">#include</a> <a class="rojo"> < DHT.h> </a><a class="comentario">         //Libreria para DHT11 sensor</a>
         <a class="colVer">#define</a> <a class="negro">DHTPIN 2      </a><a class="comentario">      //Seleccionamos el pin en el que se conecta el sensor</a> 
         <a class="colVer">#define</a> <a class="negro">DHTTYPE DHT11 </a> <a class="comentario">     //Se selecciona el DHT11 (hay //otros DHT)</a>
