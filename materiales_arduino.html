@@ -66,6 +66,17 @@ and open the template in the editor.
             .comentario{color:#bbb}
             .base a{ text-decoration: none;}
         </style>
+        <script>
+
+$(document).ready(function() {
+$('.ajax_menu a').click(function(){
+	var url=$(this).attr("href");
+      $('.contenedor').load(url+" .contenedor_interno");
+return false;
+});
+
+});
+</script>
     </head>
     <body>
         <div class="container-fluid">
@@ -80,22 +91,23 @@ and open the template in the editor.
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
                             </button>
-                            <a class="navbar-brand active san" href="#" style="color:white; ">
-                                4MTA Arduino
+                            <a class="navbar-brand active san" href="index.html" style="color:white; ">
+                                AbadRichard
                             </a>
                         </div>
-                        <div class="collapse navbar-collapse navbar-ex1-collapse">
-                            <ul class="nav navbar-nav">
-                                <li class="MenuColor san1" ><a style="color:white; " href="index.html" >&nbsp;INICIO &nbsp;</a></li>
+   <div class="collapse navbar-collapse navbar-ex1-collapse">
+    <ul class="nav navbar-nav">
+    <li><a href="index.html" >&nbsp;INICIO &nbsp;</a></li>
+          <li class="dropdown brillo" >
+             <a class="dropdown-toggle" data-toggle="dropdown" href="#">RTC Arduino<span class=" caret " ></span></a>
+                  <ul class="dropdown-menu subrillo ajax_menu">
+                     <li><a href="materiales_arduino.html">Codigos</a></li>
+                     <li><a href="proyecto_final_arduino.html">Proyecto final</a></li>
+                     <li><a href="library_arduino.html">Descargar Libreria</a></li>
+                                </ul>
+                            </li>                     
                                 
-                                <li class="MenuColor"> <a style="color:white; " href="Mat.html" >Conexión y Codigo  </a></li>
-                                <li class="MenuColor"> <a style="color:white; " href="ConfTerminal.html" >Proyecto Final  </a></li>
-                                <li class="MenuColor"> <a style="color:white; " href="library.html" >Descargar Librerias  </a></li>
                                 
-                                <li class="MenuColor"> <a style="color:white; " href="DescApp.html" >Descargar App </a></li>
-                                <li class="MenuColor "> 
-                                    <a style="color:white; " href="Nosot.html" >
-                                        NOSOTROS</a></li>
                             </ul>
                             <ul class="nav navbar-nav navbar-right">
                                 <li class="MenuColor"><a href="#" data-toggle="modal" data-target="#myModal" style="color:white; ">
@@ -107,7 +119,9 @@ and open the template in the editor.
                 </nav>  
             </nav>
         </div><br><br><br>
-        <div class="container">
+        <div class="contenedor">
+            <div class="contenedor_interno">
+                 <div class="container">
             <div class="row">
                 <div class="col-lg-4"></div>
                 <div class="col-lg-5">
@@ -538,6 +552,10 @@ and open the template in the editor.
             </div>
         </div>
                 </div>
+       
+            </div>
+        </div>
+        
             </div>
         </div>
 <div id="myModal" class="modal">

@@ -9,7 +9,6 @@
     
     //validacion de los campos en blanco
    $(document).ready(function () {
-       
     $('#caja1').blur(function () {var mensaje = $('#caja1').val();
         if (mensaje == "") {$('#MensError1').html("Este campo es Obligatorio");} });
     $('#caja2').blur(function () { var mensaje2 = $('#caja2').val();
@@ -62,13 +61,10 @@ $("#caja6").val(nombre);
         , function(){
         $(this).css("background-color", "#555");
         $(this).css("color", "#aaa");
-    });
-    
-});
+    });});
 //color el menu principal
  $(document).ready(function(){
-     
-    $('.san').hover(function(){
+     $('.san').hover(function(){
        $('.san1').css("background-color", "#060606");
         }
         , function(){

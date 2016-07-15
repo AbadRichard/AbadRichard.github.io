@@ -8,8 +8,8 @@ and open the template in the editor.
     <head>
         <title>4MTA</title>
         <meta charset="UTF-8">
-        <meta  name="viewport" content="Si est�s Viendo esta te entereza saber">     
-        <meta  name="viewport" content=" m�s de programaci�n Siga practicando ">
+        <meta  name="viewport" content="Si estas Viendo esta te entereza saber">     
+        <meta  name="viewport" content=" mis de programacion Siga practicando ">
          <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
         <link href="css/bootstrap-social.css" rel="stylesheet" type="text/css"/>
@@ -26,46 +26,9 @@ and open the template in the editor.
             .base a{ text-decoration: none; font-size: 15px;}
         </style>
     </head>
-    <body>
- <div class="container-fluid">
-            <nav class=" navbar navbar-inverse  navbar-fixed-top">
-                <nav class="navbar navbar-inverse  navbar-fixed-top colorM">
-                    <div class="container-fluid">
-                        <div class="navbar-header">
-                            <button type="button" class="navbar-toggle" data-toggle="collapse"
-                                    data-target=".navbar-ex1-collapse">
-                                <span class="sr-only">Desplegar navegaci�n</span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                            </button>
-                            <a class="navbar-brand active san" href="#" style="color:white; ">
-                                4MTA Arduino
-                            </a>
-                        </div>
-                        <div class="collapse navbar-collapse navbar-ex1-collapse">
-                            <ul class="nav navbar-nav">
-                                <li class="MenuColor san1" ><a style="color:white; " href="index.html" >&nbsp;INICIO &nbsp;</a></li>
-                            
-<li class="MenuColor"> <a style="color:white; " href="Mat.html" >Conexión y Codigo  </a></li>
-<li class="MenuColor"> <a style="color:white; " href="ConfTerminal.html" >Proyecto Final  </a></li>
-                                <li class="MenuColor"> <a style="color:white; " href="library.html" >Descargar Librerias  </a></li>
-                            
-                            <li class="MenuColor"> <a style="color:white; " href="DescApp.html" >Descargar App </a></li>
-                            <li class="MenuColor "> 
-                                    <a style="color:white; " href="Nosot.html" >
-                                        NOSOTROS</a></li>
-                            </ul>
-                            <ul class="nav navbar-nav navbar-right">
-                                <li class="MenuColor"><a href="#" data-toggle="modal" data-target="#myModal" style="color:white; ">
-                                        <span class="glyphicon glyphicon-log-in"></span> INTRANET</a></li>
-                            </ul>
-                        </div>
-
-                    </div>
-                </nav>  
-            </nav>
-        </div><br><br><br>        
+    <body><br><br><br>   
+   <div class="contenedor_interno"> 
+          
 <div class="container">
     <div class="row">
         <div class="col-lg-2"></div>
@@ -201,8 +164,7 @@ and open the template in the editor.
             </div></div>
       </div>
     </div>
-        
-    <div class="panel panel-default">
+     <div class="panel panel-default">
       <div class="panel-heading">
         <h4 class="panel-title">
           <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">ver Codigo Arduino</a>
@@ -213,11 +175,11 @@ and open the template in the editor.
         <div class="panel-body">
          <p><pre><div class="base">
 <div class="negro">
-    <a class="verde">#include</a> <<a class="rojo">SD</a>.h>                  <a class="comentario">//Libreria para el Lector de MicroSD</a>
-    <a class="verde">#include</a> <<a class="rojo"></a>DHT.h>                 <a class="comentario">//Libreria para DHT11 sensor</a>
-    <a class="verde">#include</a> <<a class="rojo">DS3231</a>.h>              <a class="comentario">//libreria de RTC</a>
-    <a class="verde">#include</a> <<a class="celeste">string</a>.h>             <a class="comentario">//Para ingresar Datos en Cadena</a>
-    <a class="verde">#include</a> <<a class="rojo">LiquidCrystal</a>.h>       <a class="comentario">//Libreria para LCD</a>
+    <a class="verde">#include</a> <a class="rojo">SD</a>.h>                  <a class="comentario">//Libreria para el Lector de MicroSD</a>
+    <a class="verde">#include</a> <a class="rojo"></a>DHT.h>                 <a class="comentario">//Libreria para DHT11 sensor</a>
+    <a class="verde">#include</a> <a class="rojo">DS3231</a>.h>              <a class="comentario">//libreria de RTC</a>
+    <a class="verde">#include</a> <a class="celeste">string</a>.h>             <a class="comentario">//Para ingresar Datos en Cadena</a>
+    <a class="verde">#include</a> <a class="rojo">LiquidCrystal</a>.h>       <a class="comentario">//Libreria para LCD</a>
 
     <a class="rojo">LiquidCrystal</a> lcd(7, 8, 9, 10, 15, 14);<a class="comentario">//Pines para LCD</a> 
 
@@ -250,7 +212,7 @@ and open the template in the editor.
         dht.<a class="rojo">begin</a>(); 
         lcd.<a class="rojo">begin</a>(16, 2);
         <a class="verde">for</a>(<a class="celeste">int</a> i=0;i<16;i++){
-           n=nombre.<a class="rojo">charAt</a>(i);
+           n=nombre. <a class="rojo">charAt</a>(i);
            lcd.<a class="rojo">print</a>(n);
           <a class="rojo">delay</a>(300);
         }
@@ -388,7 +350,8 @@ and open the template in the editor.
         <div class="col-lg-2"></div>
     </div>
   
-    </div></div>
+</div></div>
+ </div>  
         <script src="js/jquery.min.js" type="text/javascript"></script>
         <script src="js/bootstrap.min.js" type="text/javascript"></script>
         <script src="js/script.js" type="text/javascript"></script>
