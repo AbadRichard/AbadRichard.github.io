@@ -103,13 +103,45 @@
         -webkit-transform : scale(1.2);  
         -o-transform : scale(1.2);  
     }
-    
-    
+    /*menu principal*/
+   .menu {background-color: #555;}
+    .navbar .menu_principal:hover{background-color: black;}
     </style>
     </head>
     <body>
-       
-    <nav class="navbar navbar-inverse navbar-fixed-top " >
+      <div class="container-fluid">
+          <nav class="navbar navbar-inverse  navbar-fixed-top menu">
+            <div class="container-fluid">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse"
+                                    data-target=".navbar-ex1-collapse">
+                     <span class="sr-only">Desplegar navegación</span>
+                     <span class="icon-bar"></span>
+                     <span class="icon-bar"></span>
+                     <span class="icon-bar"></span>
+                </button>
+                 <a class="navbar-brand active menu_principal" href="index.html" style="color:white; "> AbadRichard </a>
+             </div>
+   <div class="collapse navbar-collapse navbar-ex1-collapse">
+    <ul class="nav navbar-nav">
+        <li class="menu_principal"><a href="index.html" >&nbsp;INICIO &nbsp;</a></li>
+        <li class="menu_principal"><a href="plantillas-menu.html">Menus Lineales</a></li>
+        <li class="menu_principal"><a href="plantillas-menu.html">Menus Lineales</a></li>
+        <li class="menu_principal"><a href="plantillas-menu.html">Menus Lineales</a></li>
+     </ul>  
+    <ul class="nav navbar-nav navbar-right">
+         <li class="menu_principal"><a href="#" data-toggle="modal" data-target="#myModal" style="color:white; "> <span class="glyphicon glyphicon-log-in"></span> INTRANET</a>
+          </li>
+      </ul>
+     </div>
+ </div>
+</nav>  
+</div>  
+        
+    <br><br><br><br>
+        <center><div class="ejemplo ejemplo2"><p>Menu </p></div></center>
+        <br>
+    <nav class="navbar navbar-inverse " >
             <div class="container-fluid ">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
