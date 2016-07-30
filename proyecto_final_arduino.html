@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>4MTA</title>
+        <meta charset="UTF-8">
+        <meta  name="viewport" content="Si estas Viendo esta te entereza saber">     
+        <meta  name="viewport" content=" mis de programacion Siga practicando ">
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="css/bootstrap-social.css" rel="stylesheet" type="text/css"/>
+        <link href="css/styles.css" rel="stylesheet" type="text/css"/>
+       <link rel="icon" href="img/one piece.ico"/>
+        <style>
+            .azul{color:#1087dd;}
+            .rojo {color: #cb2027;}
+            .negro{color:#080808; }
+            .negroF{color:#101010}
+            .verde{color: #4cae4c;}
+            .celeste{color: #1087dd; }
+            .comentario{color:#bbb}
+            .base a{ text-decoration: none; font-size: 15px;}
+        </style>
+    </head>
+    <body><br><br><br>   
+   <div class="contenedor_interno"> 
+          
+<div class="container">
+    <div class="row">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-8">
+            <div class="panel-group" id="accordion">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">ver Conexión</a>
+        </h4>
+      </div>
+      <div id="collapse1" class="panel-collapse collapse in">
+          <div class="panel-primary">
+              <div class="panel-body">
+                  <img src="img/rtc arduino dht11 sd .png" alt="" class="img-responsive"/>
+              </div>  
+          </div>
+      </div></div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse2"> Ver Codigo Java</a>
+        </h4>
+      </div>
+      <div id="collapse2" class="panel-collapse collapse">
+        <div class="panel-primary">
+            <div class="panel-body">
+                 <div class="col-lg-4">
+                    <div class="panel panel-primary">
+                            <div class="panel-body">
+                                <img src="img/Inportar Libreria arduino.PNG" alt="" class="img-responsive"/>
+                            </div>
+                        </div>
+                    </div>
+                <p><pre><div class="base">
+<a class="azul">package</a> Metodos;
+<a class="azul">public  class</a> <b class="negroF">Date_Time</b>{
+   <a class="comentario">
+  // m�todo que ordenara la fecha que envi�remos a arduino quitando el guion las fecha
+ //y ordenamos 2016-16-09  el resultado que no entrega el m�todo seria 09162016  
+</a>
+<a class="azul">public</a>  String <b class="negroF">OrderByDateStart</b>(String fecha){
+    String Retornar;//2016-16-09
+    String year, month, day;
+    year  =fecha.substring(0, 4);
+    month =fecha.substring(5, 7);
+    day   =fecha.substring(8, 10);
+    Retornar=day+month+year;
+    <a class="azul">return</a> Retornar;
+    }
+<a class="comentario"> // m�todo que ordenara la hora que envi�remos a arduino quitando el punto 
+ //y ordenamos //01:12  el resultado que no entrega el m�todo seria 0112  
+</a>    
+<a class="azul">public</a> String <b class="negroF">OrderByTime</b>(String hora){
+    String Retornar;//01:12
+    String hour ,minute;
+    hour    =hora.substring(0, 2);
+    minute  =hora.substring(3, 5);
+    Retornar=hour+minute;
+   <a class="azul">return</a>  Retornar;  
+   }
+}   </div></pre></p>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Ver Codigo jsp para enviar datos al Arduino</a>
+        </h4>
+      </div>
+      <div id="collapse3" class="panel-collapse collapse">
+       <div class="panel-primary">
+            <div class="panel-body">
+                 <div class="col-lg-4">
+                    <div class="panel panel-primary">
+                            <div class="panel-body">
+                                <img src="img/Enviar jsp a arduino.PNG" alt="" class="img-responsive"/>
+                            </div>
+                        </div>
+                    </div>
+                <p><pre><div class="base">
+<a class="comentario"><%--inportamos la librerias PanamaHitek_Arduino y la clase Date_Time--%></a>
+<%@<a class="azul">page</a> import="Metodos.Date_Time"%>
+<%@<a class="azul">page</a> import="com.panamahitek.PanamaHitek_Arduino"%>
+  <%!PanamaHitek_Arduino <a class="verde">arduino</a> = new PanamaHitek_Arduino();
+        %>
+        <%<a class="comentario">//activa el puerto Acp.jsp poner este codigo dentro de body</a>
+           <a class="azul">try</a>{
+           <a class="azul">if</a>(request.getParameter(<a class="rojo">"btnP"</a>) != <a class="azul">null</a> ) {
+                    String puertoLibre = request.getParameter(<a class="rojo">"caja8"</a>);
+                    <a class="verde">arduino</a>.arduinoTX(puertoLibre, 9600);
+                    response.sendRedirect(<a class="rojo">"EAl".html"</a>);
+                }
+            }<a class="azul">catch</a>(Exception ex) {
+                out.write(ex + "");
+                response.sendRedirect(<a class="rojo">"EA.html"</a>);
+            }
+        %>
+   </div></pre></p>
+                 <p><pre><div class="base">
+<a class="comentario"><%--inportamos la librerias PanamaHitek_Arduino y la clase Date_Time--%></a>
+<%@<a class="azul">page</a> import="Metodos.Date_Time"%>
+<%@<a class="azul">page</a> import="com.panamahitek.PanamaHitek_Arduino"%>
+ 
+  <%!PanamaHitek_Arduino <a class="verde">arduino</a> = new PanamaHitek_Arduino();
+        %>
+        <%<a class="comentario">//activa el puerto EdA.jsp codigo dentro de body</a>
+           <a class="azul">try</a>{
+            if (request.getParameter(<a class="rojo"></a>"btnE") != null) {
+                String fechaEInicio = request.getParameter(<a class="rojo">"caja1"</a>);
+                String horaEInicio = request.getParameter(<a class="rojo">"caja2"</a>);
+                String segEInicio = request.getParameter(<a class="rojo">"caja3"</a>);
+                String fechaEFinal = request.getParameter(<a class="rojo">"caja4"</a>);
+                String horaEFinal = request.getParameter(<a class="rojo">"caja5"</a>);
+                String segEFinal = request.getParameter(<a class="rojo">"caja6"</a>);
+               
+                Date_Time or = new Date_Time(); <a class="comentario">//objeto para usar los metodos de la clase </a>
+                <a class="comentario">//variable para enviar las 28 caracteres al arduino</a>
+                 String Enviar = or.OrderByDateStart(fechaEInicio) + or.OrderByTime(horaEInicio) + segEInicio
+                                + or.OrderByDateStart(fechaEFinal) + or.OrderByTime(horaEFinal) + segEFinal;
+                out.write(Enviar);
+               arduino.sendData(Enviar);<a class="comentario">//enviamos datos de inicio y final</a>
+               response.sendRedirect(<a class="rojo">"EA.html"</a>);
+            }
+            }<a class="azul">catch</a>(Exception ex) {
+                out.write(ex + "");
+                response.sendRedirect(<a class="rojo">"EA.html"</a>);
+            }
+        %>
+   </div></pre></p>
+            </div></div>
+      </div>
+    </div>
+     <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">ver Codigo Arduino</a>
+        </h4>
+      </div>
+      <div id="collapse4" class="panel-collapse collapse">
+        <div class="panel panel-primary">
+        <div class="panel-body">
+         <p><pre><div class="base">
+<div class="negro">
+    <a class="verde">#include</a> <a class="rojo">SD</a>.h>                  <a class="comentario">//Libreria para el Lector de MicroSD</a>
+    <a class="verde">#include</a> <a class="rojo"></a>DHT.h>                 <a class="comentario">//Libreria para DHT11 sensor</a>
+    <a class="verde">#include</a> <a class="rojo">DS3231</a>.h>              <a class="comentario">//libreria de RTC</a>
+    <a class="verde">#include</a> <a class="celeste">string</a>.h>             <a class="comentario">//Para ingresar Datos en Cadena</a>
+    <a class="verde">#include</a> <a class="rojo">LiquidCrystal</a>.h>       <a class="comentario">//Libreria para LCD</a>
+
+    <a class="rojo">LiquidCrystal</a> lcd(7, 8, 9, 10, 15, 14);<a class="comentario">//Pines para LCD</a> 
+
+    <a class="rojo">DS3231</a>  rtc(6, 5);              <a class="comentario">//Pines para uso de RTC</a>
+    <a class="rojo">Time</a> t;                         <a class="comentario">// Variable de tipo Fecha</a>
+    <a class="rojo">File</a> myFile;                    <a class="comentario">//variable para SD</a>
+    <a class="verde">#define</a> DHTPIN 2               <a class="comentario">//Seleccionamos el pin en el que se conecta el sensor</a>
+    <a class="verde">#define</a> DHTTYPE DHT11          <a class="comentario">//Se selecciona el DHT11 (hay //otros DHT)</a>
+    DHT dht(DHTPIN, DHTTYPE);      <a class="comentario">//Se inicia una variable que ser� usada por Arduino para comunicarse con el sensor</a>
+
+    <a class="celeste">String</a> nombre=<a class="celeste">"INICIALIZANDO...";</a> <a class="comentario">//texto para el LCD</a>
+    <a class="celeste">char</a> n;
+    <a class="celeste">String</a> puntos=<a class="celeste">"..."</a>;
+    <a class="celeste">char</a> p;
+    <a class="celeste">char</a> caracter;
+    <a class="celeste">String</a> cadena=<a class="celeste">""</a>;        <a class="comentario">//Cadena  de texto para almacenar fecha de Inicio y Final</a> 
+
+    <a class="celeste">String</a> dia,mes,anio,hora, minuto,segundo;        <a class="comentario"> //variable de inicio conteo</a>
+    <a class="celeste">String</a> diaF,mesF,anioF,horaF, minutoF,segundoF; <a class="comentario">  //variables de fin  conteo  </a>  
+
+    <a class="celeste">int</a> opcion=0;
+    <a class="celeste">int</a>  conDia,conMes,conAnio,conHora,  conMinut,  conSegund;       <a class="comentario">  //variable de inicion en horas </a> 
+    <a class="celeste">int</a> conDiaF,conMesF,conAnioF, conHoraF,  conMinutF,  conSegundF;<a class="comentario">   //variable de fin en horas</a> 
+    <a class="celeste">String</a> lcdDateInicion,lcdDateFinal;         <a class="comentario">//variables para   LCD</a>
+    <a class="celeste">boolean</a> condicion =<a class="celeste">true</a>;
+
+    <a class="celeste">void</a> <a class="verde">setup</a>() {
+        <a class="rojo">Serial</a>.<a class="rojo">begin</a>(9600);
+        rtc.<a class="rojo">begin</a>();
+        dht.<a class="rojo">begin</a>(); 
+        lcd.<a class="rojo">begin</a>(16, 2);
+        <a class="verde">for</a>(<a class="celeste">int</a> i=0;i<16;i++){
+           n=nombre. <a class="rojo">charAt</a>(i);
+           lcd.<a class="rojo">print</a>(n);
+          <a class="rojo">delay</a>(300);
+        }
+        <a class="verde">if</a> (!<a class="rojo">SD</a>.<a class="rojo">begin</a>(4)) {
+            <a class="rojo">Serial</a>.<a class="rojo">println</a>(<a class="celeste">"No se pudo inicializar"</a>);
+            <a class="verde">return</a>;
+        }
+       <a class="rojo">Serial</a>.<a class="rojo">println</a>(<a class="celeste">"inicializacion exitosa"</a>);
+      <a class="verde">if</a>(!<a class="rojo">SD</a>.<a class="rojo">exists</a>(<a class="celeste">"Excel5.csv"</a>)){
+         myFile = <a class="rojo">SD</a>.<a class="rojo">open</a>(<a class="celeste">"Excel5.csv", FILE_WRITE</a>);
+         <a class="verde">if</a>(myFile) {
+           <a class="rojo">Serial</a>.<a class="rojo">println</a>(<a class="celeste">"Archivo nuevo, Escribiendo encabezado(fila 1)"</a>);
+           myFile.<a class="rojo">println</a>(<a class="celeste">"Tiempo,Humedad,Temperatura"</a>);
+           myFile.close();
+         }<a class="verde">else</a> {
+
+           <a class="rojo">Serial</a>.<a class="rojo">println</a>(<a class="celeste">"Error creando el archivo Excel5.csv"</a>);
+         }
+     }<a class="comentario">//fin de exists
+     // rtc.setTime(11, 23,20);     // Horas
+     //rtc.setDate(14, 06, 2016);   // fechas</a>
+   }<a class="comentario">//fin de setup</a>
+
+    <a class="celeste">void</a> <a class="verde">loop</a>() {
+      <a class="celeste">float</a>  dht_hum = dht.readHumidity(); <a class="comentario">        // lee la humedad</a>
+      <a class="celeste">float</a> t dht_temp = dht.<a class="rojo">readTemperature</a>();    <a class="comentario">// lee la temperatura</a>
+      lcd.<a class="rojo">clear</a>();           
+      <a class="verde">for</a>(<a class="celeste">int</a> i=0;i<3;i++){
+            p = puntos.<a class="rojo">charAt</a>(i);
+            lcd.<a class="rojo">setCursor</a>(i, 1);
+            lcd.<a class="rojo">print</a>(p);
+            <a class="rojo">delay</a>(400);
+            lcd.<a class="rojo">clear</a>();
+        }
+       t=rtc.<a class="rojo">getTime</a>();
+       
+       <a class="verde">if</a>(<a class="rojo">Serial</a>.<a class="rojo">available</a>()){
+        caracter = <a class="celeste">char</a>(<a class="rojo">Serail</a>.<a class="rojo">read</a>());
+        cadena.<a class="rojo">concat</a>(caracter);
+        
+
+     <a class="verde">while</a>(cadena.<a class="rojo">length</a>()==28){
+     <a class="comentario">//:::::::::::::Date Inicio String::::::::::::::::</a>
+        dia=cadena.<a class="rojo">substring</a>(0,2); mes=cadena.<a class="rojo">substring</a>(2,4);
+        anio=cadena.<a class="rojo">substring</a>(4,8);
+        hora=cadena.<a class="rojo">substring</a>(8,10); minuto=cadena.<a class="rojo">substring</a>(10,12);
+        segundo=cadena.<a class="rojo">substring</a>(12,14);
+        <a class="comentario">//::::::::::::Date final String:::::::::::::::::</a>
+        diaF=cadena.<a class="rojo">substring</a>(14,16); mesF=cadena.<a class="rojo">substring</a>(16,18);
+        anioF=cadena.<a class="rojo">substring</a>(18,22);
+        horaF=cadena.<a class="rojo">substring</a>(22,24); minutoF=cadena.<a class="rojo">substring</a>(24,26);
+        segundoF=cadena.<a class="rojo">substring</a>(26,28);
+       <a class="comentario"> //::::::::::::::::::Date Inicio Int:::::::::::::::</a>
+        conDia=dia.<a class="rojo">toInt</a>();conMes=mes.<a class="rojo">toInt</a>();
+        conAnio=anio.<a class="rojo">toInt</a>();
+        conHora=hora.<a class="rojo">toInt</a>(); conMinut=minuto.<a class="rojo">toInt</a>();  
+        conSegund=segundo.<a class="rojo">toInt</a>();
+       <a class="comentario">//:::::::::::::Date final Int::::::::::::::::::::</a>
+        conDiaF=diaF.<a class="rojo">toInt</a>(); conMesF=mesF.<a class="rojo">toInt</a>();
+        conAnioF=anioF.<a class="rojo">toInt</a>();
+        conHoraF=horaF.<a class="rojo">toInt</a>(); conMinutF=minutoF.<a class="rojo">toInt</a>();  
+        conSegundF=segundoF.<a class="rojo">toInt</a>();
+       <a class="comentario">//:::::::::::::Imprimir en el LCD::::::::::::::::::::</a>
+        lcdDateInicion=dia+<a class="celeste">'/'</a>+mes+<a class="celeste">'/'</a>+<a class="celeste">'.'</a>+<a class="celeste">'.'</a>+hora+<a class="celeste">':'</a>+minuto+<a class="celeste">':'</a>+segundo;     <a class="comentario">//Imprimir  en LCD</a>
+        lcdDateFinal=diaF+<a class="celeste">'/'</a>+mesF+<a class="celeste">'/'</a>+<a class="celeste">'.'</a>+<a class="celeste">'.'</a>+horaF+<a class="celeste">':'</a>+minutoF+<a class="celeste">':'</a>+segundoF;  <a class="comentario">//Imprimir  en LCD</a>
+        t=rtc.<a class="rojo">getTime</a>();
+        lcd.<a class="rojo">setCursor</a>(0, 0);
+        lcd.<a class="rojo">print</a>(<a class="celeste">"TIEMPO DE INICIO"</a>);
+        lcd.<a class="rojo">setCursor</a>(0, 1);
+        lcd.<a class="rojo">print</a>(lcdDateInicion);
+        <a class="rojo">delay</a>(2000);
+        lcd.<a class="rojo">clear</a>();
+        lcd.<a class="rojo">setCursor</a>(0, 0);
+        lcd.<a class="rojo">print</a>(<a class="celeste">"TIEMPO FINAL"</a>);
+        lcd.<a class="rojo">setCursor</a>(0, 1);
+        lcd.<a class="rojo">print</a>(lcdDateFinal);
+        <a class="rojo">delay</a>(2000);
+        <a class="comentario">//verifica el tiempo de inicio </a>
+        
+        <a class="verde">if</a>(t.<a class="rojo">date</a>==conDia && t.<a class="rojo">mon</a>==conMes && t.<a class="rojo">year</a>==conAnio && t.<a class="rojo">hour</a>==conHora && t.<a class="rojo">min</a>==conMinut && t.<a class="rojo">sec</a>==conSegund ){
+            <a class="verde">while</a>(condicion){
+                myFile = <a class="rojo">SD</a>.<a class="rojo">open</a>(<a class="celeste">"Excel5.csv", FILE_WRITE</a>); <a class="comentario">//abrimos  el archivo</a>
+                <a class="comentario">//reinicia el contador</a>
+                <a class="verde">if</a>(opcion==4){
+                 opcion = 0; 
+                 }<a class="verde">else</a>{
+                  opcion++;}
+                 t=rtc.<a class="rojo">getTime</a>(); <a class="comentario">//actualizamos la hora y fecha</a>
+                <a class="verde">if</a>(myFile){
+
+                    myFile.<a class="rojo">print</a>(rtc.<a class="rojo">getTimeStr</a>());
+                    myFile.<a class="rojo">print</a>(',');
+                    myFile.<a class="rojo">print</a>(dht_hum);
+                    myFile.<a class="rojo">print</a>(',');
+                    myFile.<a class="rojo">println</a>(dht_temp);
+                    myFile.<a class="rojo">close</a>(); <a class="comentario">//cerramos el archivo</a>
+                <a class="verde">else</a> {
+                    Serial.println(<a class="celeste">"Error al abrir el archivo"</a>);
+                           }
+                <a class="verde">if</a>(opcion==0){
+                    lcd.<a class="rojo">clear</a>);
+                    lcd.<a class="rojo">setCursor</a>(0, 0);
+                    lcd.<a class="rojo">print</a>(<a class="celeste">""GUARDANDO A SD""</a>);
+                    lcd.<a class="rojo">setCursor</a>(0, 1);
+                    lcd.<a class="rojo">print</a>(lcdDateInicion);
+                }
+                <a class="verde">else if</a>(opcion==2){
+                    lcd.<a class="rojo">clear</a>();
+                    lcd.<a class="rojo">setCursor</a>(0, 0);
+                    lcd.<a class="rojo">print</a>(<a class="celeste">"FINALIZARA EN..."</a>);
+                    lcd.<a class="rojo">setCursor</a>(0, 1);
+                    lcd.<a class="rojo">print</a>(lcdDateFinal);
+                }
+                <a class="rojo">delay</a>(1000);
+                <a class="comentario">//verifica el tiempo final</a>
+                <a class="verde">if</a>(t.<a class="rojo">date</a>==conDiaF && t.<a class="rojo">mon</a>==conMesF && t.<a class="rojo">year</a>==conAnioF && t.<a class="rojo">hour</a>==conHoraF && t.<a class="rojo">min</a>==conMinutF && t.<a class="rojo">sec</a>==conSegundF){
+                
+                    lcd.<a class="rojo">setCursor</a>(0, 0);
+                    lcd.<a class="rojo">print</a>(<a class="celeste">"FINALIZADO"</a>);
+                    <a class="rojo">delay</a>(90000);
+                    condicion=<a class="celeste">false</a>;
+             }<a class="comentario">//fin de condici�n tiempo final </a> 
+          }<a class="comentario">//fin while  cuando la fecha de ingreso es igual guarda en sd los datos</a> 
+        }<a class="comentario">//fin de if calida la fecha y hora de ingreso</a>
+      }<a class="comentario">//fin de while  que espera la 28 caracteres</a>
+   } <a class="comentario">//fin de Serial.available</a>
+ } <a class="comentario">//fin de loop</a>
+ </div></div></pre></p> 
+     </div>
+        </div>
+      </div>
+    </div>
+  
+        </div>
+        <div class="col-lg-2"></div>
+    </div>
+  
+</div></div>
+ </div>  
+        <script src="js/jquery.min.js" type="text/javascript"></script>
+        <script src="js/bootstrap.min.js" type="text/javascript"></script>
+        <script src="js/script.js" type="text/javascript"></script>
+
+    </body>
+</html>
