@@ -1,0 +1,240 @@
+/*menu de index pagina principal color y diseño*/
+ body  {  position: relative; background-color:  #adadad;}
+.affix {
+         top:0;
+         width: 100%;
+         z-index: 9999 !important;
+}
+.navbar{ 
+	margin-bottom: 0px;  
+	border:none; 
+	background-color: #555; 
+	border-radius: 0px;	
+}
+.affix ~ .container-fluid {  position: relative; }
+
+.navbar .btn_menu{
+		border-right-style: solid;
+		border-radius: 5px;
+		color: white;
+}
+.navbar .collapse .btn_menu:hover {
+	background-color:black;
+	color: white;
+}
+.navbar .actives{
+	color:#999;
+	border-right-style: solid;
+	border-radius: 5px;
+	background-color: white;
+	background-image: linear-gradient(white, rgba(255, 255, 255, 0));
+	animation: actives 3s infinite alternate;
+}
+@keyframes actives{
+	100%{background-color: black;}
+}
+/*color para pie de pagina*/
+.color_pie_pagina{
+	height: 50px;
+		background-color: hsla(21, 50%, 92%, 1);
+		animation: color_pie_pagina 3s infinite alternate;
+		color:black;
+	}
+	@keyframes color_pie_pagina{
+		20%{background-color: hsla(21, 50%, 92%, 1);}
+		40%{background-color: hsla(360, 52%, 4%, 1);}
+		60%{background-color: hsla(118, 0%, 16%, 1);}
+		80%{background-color: hsla(30, 4%, 43%, 1);}
+		100%{background-color: hsla(265, 52%, 0%, 1);}
+	}
+	/*poner responci camvas de la cabezera para poner el texto*/
+	#canvas_cabezera{
+ 		height: 60px;
+		width: 100%;
+		margin: 0;
+		padding: 0;
+		border: solid 1px #ccc; 
+		border-style: double;
+  		display: block;
+
+	}
+	@media screen and (max-width: 980px) {
+		#canvas_cabezera {
+			width: 99%;
+		}	
+	}
+	#camvas_body{
+		height: 100%;
+		width: 100%;
+		margin: 0;
+		padding: 0;
+		background-color: red;
+	}
+	@media screen and (max-width: 980px) {
+		#camvas_body {
+			width: 99%;
+		}	
+	}
+/*imagen del android*/
+
+.android{
+	height: 300px;
+	width: 204px;
+	margin: o; 
+	padding: 0;
+	position: relative;
+	
+	margin-left: 40px;
+}
+.cabeza{
+	width: 160px; height: 70px;
+	background: black; 
+	border-radius: 600px 600px 0 0;
+	-moz-border-radius:  600px 600px 0 0;
+	-webkit-border-radius: 600px 600px 0 0;
+	-webkit-transition: all 0.1s ease-in;
+}
+.l_ojo, .r_ojo{
+	background: #fff;
+	width: 15px; height: 15px;
+	position: absolute; top: 32px;
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+}
+.l_ojo {left: 40px;}
+.r_ojo {left: 110px;}
+
+.l_antena, .r_antena{
+	width: 6px; height: 40px;
+	position: absolute; top: -20px;
+	background: black; 
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+}
+.l_antena {
+	left: 36px;
+	transform: rotate(-30deg);
+	-webkit-transform: rotate(-30deg);
+	-moz-transform: rotate(-30deg);
+}
+.r_antena {
+	left: 120px;
+	transform: rotate(30deg);
+	-webkit-transform: rotate(30deg);
+	-moz-transform: rotate(30deg);
+}
+.cuerpo{
+	width: 160px; height: 154px;
+	margin-top: 6px;
+	background: black;
+	border-radius: 0 0 25px 25px;
+	-webkit-border-radius: 0 0 25px 25px;
+	-moz-border-radius: 0 0 25px 25px;
+}
+.l_mano, .r_mano, .l_pie, .r_pie {
+	width: 40px; position: absolute;
+	-webkit-transition: all 0.1s ease-in;
+}
+.l_mano, .r_mano{
+	background: black;
+	height: 120px;
+	border-radius: 25px;
+	-moz-border-radius: 25px;
+	-webkit-border-radius: 25px;
+}
+.l_pie, .r_pie {background: black;
+	height: 80px; top: 222px;
+	border-radius: 0 0 25px 25px;
+	-moz-border-radius: 0 0 25px 25px;
+	-webkit-border-radius: 0 0 25px 25px;
+}
+.l_mano{left: -44px;}
+.r_mano {right: -1px;}
+.l_pie {left: 25px;}
+.r_pie {right: 70px;}
+
+.cabeza:hover {
+	-webkit-transform: rotate(-5deg) translate(-4px, -8px);
+	-transform: rotate(-5deg) translate(-4px, -8px);
+	-moz-transform: rotate(-5deg) translate(-4px, -8px);
+}
+.l_mano:hover{
+	-webkit-transform: rotate(15deg) translate(-14px, 0);
+	-transform: rotate(15deg) translate(-14px, 0);
+	-moz-transform: rotate(15deg) translate(-14px, 0);
+}
+.r_mano:hover{
+	-webkit-transform: rotate(-30deg) translate(30px, 0);
+}
+/*diseño para la bandera que hay dentro del android*/
+.bandera{	
+	width: 160px; 
+	height: 100px; 
+	margin-top: -140px;
+}
+
+/*diseño para la imagen de java*/
+.img_java{
+	border-style: solid; border-width: 4px; border-color: red;	
+}
+/*color para el texto de java */
+.btn_java{
+	color:black;
+	border-right-style: solid;
+	border-radius: 5px;
+	background-color: red;
+	background-image: linear-gradient(red, rgba(255, 255, 255, 0));
+	animation: btn_java 3s infinite alternate;
+	margin-left: -80px;
+	width: 80px;
+}
+@keyframes btn_java{
+	100%{background-color: blue;}
+}
+/*poner texto delante de una imagen*/
+.vista_texto img          {transition: all 0.4s ease-in-out 0.5s;}
+ .vista_texto   .img_mano img {transition: all 0.4s ease-in-out 0.5s;}
+.vista_texto h2           {filter: alpha(opacity=0);   opacity: 0;  border-bottom: 1px solid rgba(0, 0, 0, 0.3);    margin: 20px 40px 0px 40px;   transform: scale(10);    transition: all 0.3s ease-in-out 0.1s;}
+.vista_texto p            {filter: alpha(opacity=0);   opacity: 0;  transform: scale(10);         transition: all 0.3s ease-in-out 0.2s;}
+
+.vista_texto .color_fondo {
+	  opacity: 0; width: 100%; height: 100%;
+      transition: all 0.3s ease-in 0.4s;
+    }
+.vista_texto a      {filter: alpha(opacity=0);   opacity: 0;  transform: translateY(100px); transition: all 0.3s ease-in-out 0.1s;}
+.vista_texto:hover .color_fondo  {filter: alpha(opacity=100); opacity: 1;  transition-delay: 0s;background: rgba(146,96,91,0.5); }
+.vista_texto:hover h2     {filter: alpha(opacity=100); opacity: 1;  transform: scale(1);   transition-delay: 0.1s;}
+.vista_texto:hover p      {filter: alpha(opacity=100); opacity: 1;  transform: scale(1);   transition-delay: 0.2s;}
+.vista_texto:hover img    {transition-delay: 0s;}
+.vista_texto:hover a {filter: alpha(opacity=100); opacity: 1;  transform: translateY(0px); transition-delay: 0.3s; }
+.vista_img{transition-delay: 0s;
+		text-align:  justify;
+        overflow: hidden; 
+        position: relative;   
+        cursor: default;   
+        background: #fff no-repeat center center;
+    }
+.vista_img .color_fondo,.vista_img .content {
+	 position: absolute;  
+     overflow: hidden;  top: 0;    left: 0;
+	 opacity: 1;  transition-delay: 0s;
+ }
+.vista_img img                  {display: block;           position: relative;}
+.vista_img h2                   {text-transform: uppercase;color: #fff;       text-align: center;   position: relative;font-size: 17px;    padding: 10px;    background: rgba(0, 0, 0, 0.8);    margin: 20px 0 0 0;}
+.vista_img p                    {text-align: center;       color: #fff;}
+/*rotar imagen de html*/
+.img_html{margin-top: 60px;}
+.rotar_img{
+    transition: 1.5s ease;
+ 	-moz-transition: 1.5s ease; /* Firefox */
+ 	-webkit-transition: 1.5s ease; /* Chrome - Safari */
+ 	-o-transition: 1.5s ease; /* Opera */
+  border-radius: 5px;}
+.rotar_img:hover{
+    transform : rotate(360deg);
+	-moz-transform : rotate(360deg); /* Firefox */
+	-webkit-transform : rotate(360deg); /* Chrome*/
+	-o-transform : rotate(360deg); /* Opera */
+ }
