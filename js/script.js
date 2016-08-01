@@ -74,25 +74,6 @@ $("#caja6").val(nombre);
         $(this).css("color", "#aaa");
     });    
 });
-//color para sub Menu
- $(document).ready(function(){
-    $(".MenuColor").hover(function(){
-       $(this).css("background-color", "#060606");
-        $(this).css("color", "white");}
-        , function(){
-        $(this).css("background-color", "#555");
-        $(this).css("color", "#aaa");
-    });});
-//color el menu principal
- $(document).ready(function(){
-     $('.san').hover(function(){
-       $('.san1').css("background-color", "#060606");
-        }
-        , function(){
-        $('.san1').css("background-color", "#555");
-       });   
-});
-
 
 /* Cuando se aga clik en el button o link pueda salir un mensaje de alerta*/
 $( function( ){$("[data-toggle='popover'" ).popover( );} );
@@ -104,4 +85,47 @@ $( function( ){$( "[data-toggle='tooltip']").tooltip( );} );
 jQuery.extend(jQuery.easing,{easeInOutSine:function(j,i,b,c,d){return -c/2*(Math.cos(Math.PI*i/d)-1)+b}});function ws_domino(m,i,k){$=jQuery;var h=$(this);var c=m.columns||5,l=m.rows||2,d=m.centerRow||2,g=m.centerColumn||2;var f=$("<div>").addClass("ws_effect ws_domino").css({position:"absolute",width:"100%",height:"100%",top:0,overflow:"hidden"}).appendTo(k);var b=$("<div>").addClass("ws_zoom").appendTo(f);var j=$("<div>").addClass("ws_parts").appendTo(f);var e=k.find(".ws_list");var a;this.go=function(y,x){function z(){j.find("img").stop(1,1);j.empty();b.empty();a=0}z();var s=$(i.get(x));s={width:s.width(),height:s.height(),marginTop:parseFloat(s.css("marginTop")),marginLeft:parseFloat(s.css("marginLeft"))};var D=$(i.get(x)).clone().appendTo(b).css({position:"absolute",top:0,left:0}).css(s);var p=f.width();var o=f.height();var w=Math.floor(p/c);var v=Math.floor(o/l);var t=p-w*(c-1);var E=o-v*(l-1);function I(L,K){return Math.random()*(K-L+1)+L}e.hide();var u=[];for(var C=0;C<l;C++){u[C]=[];for(var B=0;B<c;B++){var q=m.duration*(1-Math.abs((d*g-C*B)/(2*l*c)));var F=B<c-1?w:t;var n=C<l-1?v:E;u[C][B]=$("<div>").css({width:F,height:n,position:"absolute",top:C*v,left:B*w,overflow:"hidden"});var H=I(C-2,C+2);var G=I(B-2,B+2);u[C][B].appendTo(j);var J=$(i.get(y)).clone().appendTo(u[C][B]).css(s);var A={top:-H*v,left:-G*w,opacity:0};var r={top:-C*v,left:-B*w,opacity:1};if(m.support.transform&&m.support.transition){A.translate=[A.left,A.top,0];r.translate=[r.left,r.top,0];delete A.top;delete A.left;delete r.top;delete r.left}wowAnimate(J.css({position:"absolute"}),A,r,q,"easeInOutSine",function(){a++;if(a==l*c){z();e.stop(1,1);h.trigger("effectEnd")}})}}wowAnimate(D,{scale:1},{scale:1.6},m.duration,m.duration*0.2,"easeInOutSine")}};// -----------------------------------------------------------------------------------
 
 jQuery("#wowslider-container1").wowSlider({effect:"domino",prev:"",next:"",duration:20*100,delay:20*100,width:640,height:360,autoPlay:true,autoPlayVideo:false,playPause:true,stopOnHover:false,loop:false,bullets:1,caption:true,captionEffect:"parallax",controls:true,responsive:1,fullScreen:false,gestures:2,onBeforeStep:0,images:0});
+//metodo para digujar texto en cabezera
+function diguja_texto_cabezera()  {
+        
+        var c = document.getElementById("canvas_cabezera");
+        var ctx = c.getContext("2d");
 
+        c.height = window.innerHeight;
+        c.width = window.innerWidth;
+        var texto_mostrar = "ABAD MAYTA JUAN RICHARD 1994"; //poner texto
+        
+        texto_mostrar = texto_mostrar.split("");
+
+        var font_size = 13;
+        var columns = c.width/font_size; 
+        
+        var drops = [];
+        
+        for(var x = 0; x < columns; x++)
+            drops[x] = 1; 
+
+        
+        function digujar(){
+            
+            ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
+            ctx.fillRect(0, 0, c.width, c.height);
+            
+            ctx.fillStyle = "white"; 
+            ctx.font = font_size + "px arial";
+            
+            for(var i = 0; i < drops.length; i++){
+                
+                var text = texto_mostrar[Math.floor(Math.random()*texto_mostrar.length)];
+                
+                ctx.fillText(text, i*font_size, drops[i]*font_size);
+                
+                
+                if(drops[i]*font_size > c.height && Math.random() > 0.975)
+                    drops[i] = 0;
+                    drops[i]++;
+            }
+        }
+
+        setInterval(digujar, 33);
+}
